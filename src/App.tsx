@@ -15,11 +15,6 @@ function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex">
             <Link to="/" className="flex items-center">
-              <img 
-                src="https://i.imgur.com/YQBxwZL.png" 
-                alt="SushrutaDX Logo" 
-                className="h-8 w-8 mr-2"
-              />
               <span className="text-xl font-bold text-gray-900">SushrutaDX</span>
             </Link>
           </div>
@@ -59,8 +54,8 @@ function Footer() {
           </div>
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
-            <p className="text-sm">Email: contact@sushrutadx.com</p>
-            <p className="text-sm">Phone: (555) 123-4567</p>
+            <p className="text-sm">Email: rajkumar@sushrutadx.com</p>
+            <p className="text-sm">Phone: (551) 282 0234</p>
           </div>
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Legal</h3>

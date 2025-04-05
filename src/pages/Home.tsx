@@ -1,6 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Brain, Shield, LineChart, Bell, Database, Activity, Award } from 'lucide-react';
+import sushrutaLogo from "../assets/sushrutadx_logo.png";
+import ssl from "../assets/ssl.png";
 
 function FeatureCard({ icon: Icon, title, description }: { icon: React.ElementType, title: string, description: string }) {
   return (
@@ -24,10 +26,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <div className="flex justify-center mb-8">
-              <img 
-                src="https://i.imgur.com/YQBxwZL.png" 
-                alt="SushrutaDX Logo" 
-                className="w-48 h-48"
+              <img
+                src={`${ssl}`}
+                alt="SushrutaDX Logo"
+                className="w-49 h-48 opacity-75 rounded-full shadow-lg"
               />
             </div>
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
