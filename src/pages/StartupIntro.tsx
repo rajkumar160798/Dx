@@ -308,7 +308,7 @@ const StartupIntro = () => {
               <span className="text-blue-600 inline-block hover:scale-105 transition-transform cursor-default"> Predictive AI</span>
             </h1>
             <p className="text-xl text-gray-800 mb-8 max-w-2xl mx-auto">
-              SushrutaDX is building the future of preventive healthcare by combining advanced AI with medical expertise to detect health risks before they become serious.
+              <span className="text-blue-600">Sushruta</span>DX is building the future of preventive healthcare by combining advanced AI with medical expertise to detect health risks before they become serious.
             </p>
           </div>
           <ScrollIndicator text="Discover Our Vision" targetSection={1} />
@@ -322,7 +322,7 @@ const StartupIntro = () => {
             <div data-aos="fade-up" className="glow-effect p-8 rounded-2xl">
               <h2 className="text-3xl font-bold mb-6">What is SushrutaDX?</h2>
               <p className="text-gray-600 mb-4">
-                Named after Sushruta, the ancient Indian physician known as the "Father of Surgery," SushrutaDX represents the fusion of traditional medical wisdom with modern AI technology.
+                Named after <span className="text-blue-600">Sushruta</span>, the ancient Indian physician known as the "Father of Surgery," SushrutaDX represents the fusion of traditional medical wisdom with modern AI technology.
               </p>
               <p className="text-gray-600">
                 The "DX" in our name stands for "Diagnostic Excellence," reflecting our commitment to providing healthcare professionals with advanced diagnostic tools powered by artificial intelligence.
@@ -374,7 +374,7 @@ const StartupIntro = () => {
                 A passionate software engineer and healthcare technology enthusiast, Raj brings together expertise in AI, machine learning, and healthcare systems to create innovative solutions.
               </p>
               <p className="text-gray-600">
-                With a vision to transform healthcare through technology, Raj developed SushrutaDX to bridge the gap between advanced AI capabilities and practical healthcare applications.
+                With a vision to transform healthcare through technology, Raj is developing <span className="text-blue-600">Sushruta</span>DX to bridge the gap between advanced AI capabilities and practical healthcare applications.
               </p>
             </div>
           </div>
@@ -498,7 +498,7 @@ const StartupIntro = () => {
 
       {/* Footer */}
       <footer className="py-8 px-4 text-center text-gray-600">
-        <p>© 2024 SushrutaDX. Building the future of healthcare.</p>
+        <p>© 2025 <span className="text-blue-600">Sushruta</span>DX. Building the future of healthcare.</p>
       </footer>
     </div>
   );
