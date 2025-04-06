@@ -97,9 +97,9 @@ const Home = () => {
       <section className="py-16 px-4 max-w-screen-xl mx-auto">
         <div className="flex flex-col items-center text-center space-y-6" data-aos="fade-up">
           <div className="relative">
-            <div className="absolute inset-0 bg-blue-100 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-snug relative z-10">
-              Welcome to <span className="text-blue-600 float-animation inline-block">SushrutaDX</span>
+            <div className="absolute inset-0 bg-blue-100 rounded-full filter blur-3xl opacity-20 animate-float"></div>
+            <h1 className="text-4xl sm:text-5xl font-bold  relative z-10">
+              Welcome to <span className="text-blue-600 inline-block">Sushruta</span><span className="text-grey-600">DX</span>
             </h1>
           </div>
           <p className="text-lg sm:text-xl max-w-2xl text-gray-600">
