@@ -1,33 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-hot-toast';
 import { FileText, Download, Search, Filter } from 'lucide-react';
 
-function Reports() {
-  const reports = [
-    {
-      id: 1,
-      patientId: 'P-2024-001',
-      reportType: 'Diagnostic Analysis',
-      date: '2024-03-15',
-      status: 'Complete',
-      risk: 'Low'
-    },
-    {
-      id: 2,
-      patientId: 'P-2024-002',
-      reportType: 'Health Assessment',
-      date: '2024-03-14',
-      status: 'Complete',
-      risk: 'Medium'
-    },
-    {
-      id: 3,
-      patientId: 'P-2024-003',
-      reportType: 'Predictive Analysis',
-      date: '2024-03-13',
-      status: 'Complete',
-      risk: 'High'
-    }
-  ];
+// Dummy data for reports
+const dummyReports = [
+  {
+    id: 1,
+    name: 'John Smith',
+    date: '2024-03-15',
+    condition: 'Diabetes',
+    risk: 'High',
+    status: 'Completed',
+  },
+  {
+    id: 2,
+    name: 'Sarah Johnson',
+    date: '2024-03-14',
+    condition: 'Heart Disease',
+    risk: 'Medium',
+    status: 'Completed',
+  },
+  {
+    id: 3,
+    name: 'Michael Brown',
+    date: '2024-03-13',
+    condition: 'Hypertension',
+    risk: 'Low',
+    status: 'Completed',
+  },
+  {
+    id: 4,
+    name: 'Emily Davis',
+    date: '2024-03-12',
+    condition: 'Obesity',
+    risk: 'High',
+    status: 'Completed',
+  },
+  {
+    id: 5,
+    name: 'David Wilson',
+    date: '2024-03-11',
+    condition: 'Diabetes',
+    risk: 'Medium',
+    status: 'Completed',
+  },
+];
+
+const Reports = () => {
+  const [filterCondition, setFilterCondition] = useState('');
+  const [filterRisk, setFilterRisk] = useState('');
+
+  const handleDownload = (reportId: number) => {
+    // Simulate report download
+    toast.success(`Downloading report #${reportId}...`);
+  };
+
+  const filteredReports = dummyReports.filter((report) => {
+    if (filterCondition && report.condition !== filterCondition) return false;
+    if (filterRisk && report.risk !== filterRisk) return false;
+    return true;
+  });
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -68,11 +100,11 @@ function Reports() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
-              {reports.map((report) => (
+              {filteredReports.map((report) => (
                 <tr key={report.id}>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{report.patientId}</td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{report.reportType}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{report.name}</td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{report.date}</td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{report.condition}</td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
                       {report.status}
@@ -101,7 +133,7 @@ function Reports() {
       </div>
 
       <div className="flex justify-between items-center">
-        <p className="text-sm text-gray-500">Showing 3 of 3 reports</p>
+        <p className="text-sm text-gray-500">Showing {filteredReports.length} of {filteredReports.length} reports</p>
         <div className="flex gap-2">
           <button className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50" disabled>
             Previous
@@ -113,6 +145,7 @@ function Reports() {
       </div>
     </div>
   );
-}
+};
 
 export default Reports;
+
